@@ -334,12 +334,13 @@ void JsonObject::remove(const char* iKey) {
         } else {
             this->child = cur->next;
         }
-        delete cur;
+        JsonObject::deleteNode(cur);
     } else {
         cur->prev->next = cur->next;
         if (cur->next != nullptr) {
             cur->next->prev = cur->prev;
         }
+        JsonObject::deleteNode(cur);
     }
 }
 
@@ -356,12 +357,13 @@ void JsonObject::remove(int idx) {
         } else {
             this->child = cur->next;
         }
-        delete cur;
+        JsonObject::deleteNode(cur);
     } else {
         cur->prev->next = cur->next;
         if (cur->next != nullptr) {
             cur->next->prev = cur->prev;
         }
+        JsonObject::deleteNode(cur);
     }
 }
 

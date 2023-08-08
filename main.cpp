@@ -113,7 +113,7 @@ int main() {
     cout << oJson.toString() << endl;
     cout << endl;
 
-    auto oJson2 = Json(R"({"base":{"pp":0,"qq":[1.9, 1, null, false]},"id":32,"name":"fda"} )");
+    auto oJson2 = Json(R"({"base":{"pp":0,"qq":[-1.9, 1, null, false]},"id":32,"name":"fda"} )");
     cout << oJson2 << endl;
 
     // 添加
